@@ -65,7 +65,7 @@
     mas.hidden = vis.length <= limite;
   }
   if (document.getElementById('lista-ganchos')) {
-    botonesFiltro('quien', { 'los dos': 'Los dos', 'texto en pantalla': 'Texto en pantalla' });
+    botonesFiltro('quien', { 'texto en pantalla': 'Texto en pantalla' });
     botonesFiltro('pilar', ETQ_PILAR);
     document.getElementById('buscar').addEventListener('input', function () { texto = this.value; limite = 12; pintarGanchos(); });
     document.getElementById('mas').addEventListener('click', function () { limite += 12; pintarGanchos(); });
@@ -230,9 +230,9 @@
 
   /* ---------- Calendario ---------- */
   var SEMANAS = [
-    { n: 1, f: '20 al 26 oct', fase: 'Arranque', pauta: 10, que: ['El enlace del show en la bio, en Threads y de primero en el Linktree.', 'Reel de anuncio con Moisés y Luis Carlos juntos.', 'Estado de WhatsApp y foto de perfil del evento.', 'Primer post con la palabra clave FELIZ.'] },
+    { n: 1, f: '20 al 26 oct', fase: 'Arranque', pauta: 10, que: ['El enlace del show en la bio, en Threads y de primero en el Linktree.', 'Reel de anuncio en el que Luis Carlos presenta a Moisés.', 'Estado de WhatsApp y foto de perfil del evento.', 'Primer post con la palabra clave FELIZ.'] },
     { n: 2, f: '27 oct al 2 nov', fase: 'Reír', pauta: 10, que: ['Clips de shows anteriores con la risa del público.', 'Carrusel «Lo que necesitas saber» (fecha, lugar, pago, spam).', 'Primeras pruebas de pauta con 4 a 6 piezas.'] },
-    { n: 3, f: '3 al 9 nov', fase: 'Conectar', pauta: 13, que: ['Luis Carlos a cámara: «Reírse también sana».', 'Hilo en Threads con una pregunta en la que la gente se reconozca.', 'Heridas contadas con humor: Luis Carlos plantea y Moisés remata.'] },
+    { n: 3, f: '3 al 9 nov', fase: 'Conectar', pauta: 13, que: ['Luis Carlos presenta a Moisés: «Reírse también sana».', 'Hilo en Threads con una pregunta en la que la gente se reconozca.', 'Heridas contadas con humor: Moisés pasa de la risa a la reflexión.'] },
     { n: 4, f: '10 al 16 nov', fase: 'Mostrar', pauta: 13, que: ['Ensayo y detrás de cámaras.', 'Colaboración con 1 a 3 creadores de Barranquilla.', 'Nota o entrevista en prensa local.'] },
     { n: 5, f: '17 al 23 nov', fase: 'Puente', pauta: 14, que: ['El 20 de noviembre, en «Cuando la vida nos mueve», se anuncia Atrévete con un QR en pantalla.', 'Clips de ese evento al día siguiente.'] },
     { n: 6, f: '24 al 30 nov', fase: 'Grupos y regalo', pauta: 20, que: ['«Vente con tu combo»: grupos de amigos y cierre de año de empresas.', '«Regala la risa» para Navidad.', 'Contacto directo con empresas por WhatsApp.'] },
@@ -276,7 +276,7 @@
     });
     var porBoleta = cop / Math.max(res.med * bpc, 0.01);
     document.getElementById('r-costo').textContent = 'Escenario medio: ≈ ' + pesos(porBoleta) + ' de pauta por boleta (la meta es menos de $45.000; la boleta vale $90.000). ' +
-      (porBoleta > 45000 ? 'Con gente que no los conoce y una boleta por compra no se alcanza la meta: por eso la pauta va primero a quien ya los sigue y se empuja la compra en grupo. Prueba con 2 o 3 boletas por compra.' : 'Con este promedio de boletas por compra, la pauta está dentro de la meta.');
+      (porBoleta > 45000 ? 'Con gente que no conoce a Moisés ni a Konsiente y una boleta por compra no se alcanza la meta: por eso la pauta va primero a quien ya los sigue y se empuja la compra en grupo. Prueba con 2 o 3 boletas por compra.' : 'Con este promedio de boletas por compra, la pauta está dentro de la meta.');
     document.querySelectorAll('.niveles .f').forEach(function (b) { b.setAttribute('aria-pressed', Number(b.getAttribute('data-monto')) === cop ? 'true' : 'false'); });
   }
   if (sm && sb) {
@@ -295,7 +295,7 @@
     ['Correos desde info@turquexa.com.co, fuera de spam', 'amb', 'Ambos'],
     ['Términos de venta y política de datos de TURQUEXA', 'cli', 'Cliente'],
     ['Permisos de los clips y para grabar el show', 'cli', 'Cliente'],
-    ['Cómo presentamos a Moisés y a Luis Carlos en el tiquete y la página', 'amb', 'Ambos'],
+    ['Cómo presentamos a Moisés y su show en el tiquete y la página', 'amb', 'Ambos'],
     ['Palabra clave FELIZ y respuesta con el enlace', 'kv', 'KVRA']
   ];
   var lc = document.getElementById('lista-check');
